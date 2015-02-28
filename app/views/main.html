@@ -1,0 +1,19 @@
+<div>
+ correct: {{ goodCount() }}
+ error: {{ errorCount() }}
+</div>
+
+<span class="typcn typcn-arrow-left"><span>
+
+<div id="viewport">
+  <ul class="stack" swing-stack>
+    <li
+        swing-card
+        swing-on-throwout="remove($index)"
+        swing-on-throwoutleft="goBad($index)"
+        swing-on-throwoutright="goGood($index)"
+        ng-repeat="card in cards"
+        ng-style="{'font-family': '{{ card.font }}'}"
+        >{{card.name}}</li>
+  </ul>
+</div>
